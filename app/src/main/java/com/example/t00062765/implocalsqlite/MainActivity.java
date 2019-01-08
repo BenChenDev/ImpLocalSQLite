@@ -1,7 +1,5 @@
 package com.example.t00062765.implocalsqlite;
 
-import android.support.v7.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -17,7 +15,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        openDB();
     }
 
     @Override
