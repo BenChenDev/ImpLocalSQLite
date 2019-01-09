@@ -22,19 +22,20 @@ public class DBAdapter {
     // [TO_DO_A2]
     // TODO: Change the field names (column names) of your table
 
-    public static final String KEY_NAME = "name";
-    public static final String KEY_STUDENTNUM = "studentnum";
-    public static final String KEY_FAVCOLOUR = "favcolour";
+    public static final String KEY_FIRSTNAME = "firstname";
+    public static final String KEY_LASTNAME = "lastname";
+    public static final String KEY_MARKS = "marks";
+    public static final String KEY_ID = "id";
 
     // [TO_DO_A3]
     // Update the field numbers here (0 = KEY_ROWID, 1=...)
-    public static final int COL_NAME = 1;
-    public static final int COL_STUDENTNUM = 2;
-    public static final int COL_FAVCOLOUR = 3;
+    public static final int COL_FIRSTNAME = 1;
+    public static final int COL_LASTNAME = 2;
+    public static final int COL_MARKS = 3;
 
     // [TO_DO_A4]
     // Update the ALL-KEYS string array
-    public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_NAME, KEY_STUDENTNUM, KEY_FAVCOLOUR};
+    public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_FIRSTNAME, KEY_LASTNAME, KEY_MARKS};
 
     // [TO_DO_A5]
     // DB info: db name and table name.

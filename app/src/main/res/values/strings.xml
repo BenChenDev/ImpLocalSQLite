@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ImpLocalSQLite</string>
+    <string name="firstName">First Name</string>
     <string name="create">Create</string>
-    <string name="readAll">Read all</string>
+    <string name="readAllButton">Read all</string>
+
 </resources>
