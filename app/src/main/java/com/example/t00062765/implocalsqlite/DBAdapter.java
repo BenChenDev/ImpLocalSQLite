@@ -25,7 +25,7 @@ public class DBAdapter {
     public static final String KEY_FIRSTNAME = "firstname";
     public static final String KEY_LASTNAME = "lastname";
     public static final String KEY_MARKS = "marks";
-    public static final String KEY_ID = "id";
+    //public static final String KEY_ID = "id";
 
     // [TO_DO_A3]
     // Update the field numbers here (0 = KEY_ROWID, 1=...)
@@ -52,9 +52,9 @@ public class DBAdapter {
     private static final String DATABASE_CREATE_SQL =
             "create table " + DATABASE_TABLE
                     + " (" + KEY_ROWID + " integer primary key autoincrement, "
-                    + KEY_NAME         + " text not null, "
-                    + KEY_STUDENTNUM   + " integer not null, "
-                    + KEY_FAVCOLOUR    + " string not null"
+                    + KEY_FIRSTNAME         + " string not null, "
+                    + KEY_LASTNAME   + " string not null, "
+                    + KEY_MARKS    + " integer not null"
                     + ");";
 
     // Context of application who uses us.
@@ -84,15 +84,15 @@ public class DBAdapter {
     }
 
     // Add a new set of values to the database.
-    public long insertRow(String name, int studentNum, String favColour) {
+    public long insertRow(String firstname, String lastname, int marks) {
         // [TO_DO_A8]
         // Update data in the row with new fields.
         // Also change the function's arguments to be what you need!
         // Create row's data:
         ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_NAME, name);
-        initialValues.put(KEY_STUDENTNUM, studentNum);
-        initialValues.put(KEY_FAVCOLOUR, favColour);
+        initialValues.put(KEY_FIRSTNAME, firstname);
+        initialValues.put(KEY_LASTNAME, lastname);
+        initialValues.put(KEY_MARKS, marks);
 
         // Insert it into the database.
         return db.insert(DATABASE_TABLE, null, initialValues);

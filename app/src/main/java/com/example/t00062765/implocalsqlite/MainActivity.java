@@ -72,15 +72,15 @@ public class MainActivity extends Activity {
             do {
                 // Process the data:
                 int id = cursor.getInt(DBAdapter.COL_ROWID);
-                String name = cursor.getString(DBAdapter.COL_NAME);
-                int studentNumber = cursor.getInt(DBAdapter.COL_STUDENTNUM);
-                String favColour = cursor.getString(DBAdapter.COL_FAVCOLOUR);
+                String firstname = cursor.getString(DBAdapter.COL_FIRSTNAME);
+                String lastname = cursor.getString(DBAdapter.COL_LASTNAME);
+                int marks = cursor.getInt(DBAdapter.COL_MARKS);
 
                 // Append data to the message:
                 message += "id=" + id
-                        +", name=" + name
-                        +", #=" + studentNumber
-                        +", Colour=" + favColour
+                        +", first name=" + firstname
+                        +", last name=" + lastname
+                        +", marks=" + marks
                         +"\n";
 
                 // [TO_DO_B6]

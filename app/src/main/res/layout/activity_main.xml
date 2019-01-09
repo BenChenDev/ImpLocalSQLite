@@ -7,28 +7,29 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/createButton"
+        android:id="@+id/createBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="84dp"
+        android:onClick="onClick_AddRecord"
+        android:text="@string/createBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMarks" />
+
+    <Button
+        android:id="@+id/readAllBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="416dp"
-        android:onClick="onClick_AddRecord"
-        android:text="@string/create"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.239"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/readAllButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="84dp"
         android:onClick="onClick_DisplayRecords"
-        android:text="@string/readAllButton"
-        app:layout_constraintStart_toEndOf="@+id/createButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/readAllBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/createBtn"
+        app:layout_constraintTop_toBottomOf="@+id/editMarks" />
 
     <TextView
         android:id="@+id/firstName"
@@ -45,40 +46,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="First Name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:text="First Name" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/editLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Last Name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="73dp"
-        tools:text="Last Name" />
+        tools:layout_editor_absoluteY="73dp" />
 
     <EditText
         android:id="@+id/editMarks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Marks"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="135dp"
-        tools:text="Marks" />
-
-    <EditText
-        android:id="@+id/editId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="197dp"
-        tools:text="ID" />
+        tools:layout_editor_absoluteY="135dp" />
 
     <TextView
         android:id="@+id/lastName"
@@ -98,28 +89,24 @@
         tools:layout_editor_absoluteY="148dp"
         tools:text="Marks" />
 
-    <TextView
-        android:id="@+id/Id"
+    <Button
+        android:id="@+id/updateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="212dp"
-        tools:text="ID" />
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/updateBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createBtn" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/deleteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="347dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="347dp" />
+        android:layout_marginEnd="88dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/deleteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readAllBtn" />
 
 </android.support.constraint.ConstraintLayout>
