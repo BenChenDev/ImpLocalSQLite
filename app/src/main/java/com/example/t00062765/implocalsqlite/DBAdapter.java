@@ -139,17 +139,17 @@ public class DBAdapter {
     }
 
     // Change an existing row to be equal to new data.
-    public boolean updateRow(long rowId, String name, int studentNum, String favColour) {
-        String where = KEY_ROWID + "=" + rowId;
+    public boolean updateRow(String firstName, String lastName, int marks) {
+        String where = KEY_FIRSTNAME + "=" + firstName + "&&" + KEY_LASTNAME + "=" + lastName;
 
         // [TO_DO_A8]
         // Update data in the row with new fields.
         // Also change the function's arguments to be what you need!
         // Create row's data:
         ContentValues newValues = new ContentValues();
-        newValues.put(KEY_NAME, name);
-        newValues.put(KEY_STUDENTNUM, studentNum);
-        newValues.put(KEY_FAVCOLOUR, favColour);
+        newValues.put(KEY_FIRSTNAME, firstName);
+        newValues.put(KEY_LASTNAME, lastName);
+        newValues.put(KEY_MARKS, marks);
 
         // Insert it into the database.
         return db.update(DATABASE_TABLE, newValues, where, null) != 0;
