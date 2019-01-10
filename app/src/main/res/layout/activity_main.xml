@@ -4,29 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="50dp">
 
     <Button
         android:id="@+id/createBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="128dp"
         android:text="@string/createBtn"
+        app:layout_constraintEnd_toStartOf="@+id/readAllBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editMarks" />
 
     <Button
         android:id="@+id/readAllBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginTop="128dp"
         android:onClick="onClick_DisplayRecords"
         android:text="@string/readAllBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/createBtn"
         app:layout_constraintTop_toBottomOf="@+id/editMarks" />
 
@@ -34,86 +35,87 @@
         android:id="@+id/firstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginStart="54dp"
         android:text="@string/firstName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/editFirstName"
+        app:layout_constraintEnd_toStartOf="@+id/editFirstName"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editFirstName"
-        android:layout_width="197dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="59dp"
         android:ems="10"
         android:hint="@string/firstName"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editLastName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/firstName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editLastName"
-        android:layout_width="196dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="220dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
         android:ems="10"
         android:hint="@string/lastName"
         android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/lastName"
+        app:layout_constraintBottom_toTopOf="@+id/editMarks"
+        app:layout_constraintStart_toStartOf="@+id/editFirstName"
         app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
 
     <EditText
         android:id="@+id/editMarks"
-        android:layout_width="194dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="220dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="197dp"
         android:ems="10"
         android:hint="@string/marks"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/marks"
+        app:layout_constraintBottom_toTopOf="@+id/updateBtn"
+        app:layout_constraintStart_toStartOf="@+id/editLastName"
         app:layout_constraintTop_toBottomOf="@+id/editLastName" />
 
     <TextView
         android:id="@+id/lastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName"
-        android:text="@string/lastName" />
+        android:layout_marginBottom="2dp"
+        android:text="@string/lastName"
+        app:layout_constraintBottom_toBottomOf="@+id/editLastName"
+        app:layout_constraintStart_toStartOf="@+id/firstName" />
 
     <TextView
         android:id="@+id/marks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName"
-        android:text="@string/marks" />
+        android:layout_marginTop="36dp"
+        android:text="@string/marks"
+        app:layout_constraintStart_toStartOf="@+id/lastName"
+        app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
     <Button
         android:id="@+id/updateBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="151dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginBottom="178dp"
         android:text="@string/updateBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createBtn" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/createBtn"
+        app:layout_constraintTop_toBottomOf="@+id/editMarks" />
 
     <Button
         android:id="@+id/deleteBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:layout_marginTop="12dp"
         android:text="@string/deleteBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/readAllBtn" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/updateBtn"
+        app:layout_constraintStart_toStartOf="@+id/readAllBtn" />
 
 </android.support.constraint.ConstraintLayout>

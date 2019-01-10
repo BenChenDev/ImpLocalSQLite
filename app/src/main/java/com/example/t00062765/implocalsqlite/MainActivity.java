@@ -131,7 +131,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 } else {
                     Long id = myDb.insertRow(fn, ln, Integer.valueOf(mk));
                     Toast.makeText(getApplicationContext(),"Command Sent! .. ID = " + id,Toast.LENGTH_LONG).show();
+                    Log.d("record created. ID= ", id.toString());
                 }
+                break;
+            case R.id.readAllBtn:
+                onClick_DisplayRecords(v);
                 break;
             default:
                 break;
