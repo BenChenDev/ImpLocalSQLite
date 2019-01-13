@@ -129,9 +129,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 if(fn.isEmpty() || ln.isEmpty() || mk.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Please make sure all fields are filled!",Toast.LENGTH_LONG).show();
                 } else {
-                    Long id = myDb.insertRow(fn, ln, Integer.valueOf(mk));
-                    Toast.makeText(getApplicationContext(),"Command Sent! .. ID = " + id,Toast.LENGTH_LONG).show();
-                    Log.d("record created. ID= ", id.toString());
+                    if(myDb.getRow(fn,ln).getCount() > 0){
+                        Toast.makeText(getApplicationContext(),"Record already existed. Add Failed.",Toast.LENGTH_LONG).show();
+                    } else {
+                        Long id = myDb.insertRow(fn, ln, Integer.valueOf(mk));
+                        Toast.makeText(getApplicationContext(), "Command Sent! .. ID = " + id, Toast.LENGTH_LONG).show();
+                        Log.d("record created. ID= ", id.toString());
+                    }
                 }
                 break;
             case R.id.readAllBtn:

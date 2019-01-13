@@ -138,6 +138,18 @@ public class DBAdapter {
         return c;
     }
 
+    // Get a specific row by first name and first name
+    public Cursor getRow(String firstName, String lastName){
+        String where = "(" + KEY_FIRSTNAME + " = " + "'" + firstName + "'"+ " AND " +
+                KEY_LASTNAME + " = " + "'" + lastName + "'" +")";
+        Cursor c = db.query(true, DATABASE_TABLE, ALL_KEYS,
+                where, null, null, null, null, null);
+        if(c != null){
+            c.moveToFirst();
+        }
+        return c;
+    }
+
     // Change an existing row to be equal to new data.
     public boolean updateRow(String firstName, String lastName, int marks) {
         String where = KEY_FIRSTNAME + "=" + firstName + "&&" + KEY_LASTNAME + "=" + lastName;
